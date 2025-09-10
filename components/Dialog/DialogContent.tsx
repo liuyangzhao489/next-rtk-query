@@ -8,7 +8,7 @@ interface CustomDialogContentProps extends DialogContentProps {
 }
 
 export const CustomDialogContent: React.FC<CustomDialogContentProps> = ({
-    children, error, ...props
+    children, error
 }) => {
     return (
         <DialogContent>

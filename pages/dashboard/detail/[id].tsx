@@ -17,7 +17,6 @@ const Detail = () => {
     const {
         data: student,
         isLoading: studentLoading,
-        isError: studentError 
     } = useGetStudentByIdQuery(id as string);
 
 

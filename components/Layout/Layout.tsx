@@ -3,7 +3,6 @@ import { Box, IconButton, useMediaQuery } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import Sidebar from "./Sidebar";
-import Header from "./Header";
 
 interface LayoutProps {
   children: ReactNode;

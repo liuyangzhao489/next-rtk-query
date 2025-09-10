@@ -11,4 +11,16 @@ module.exports = {
   },
 }
 
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/signin',
+        permanent: false, // use true if permanent
+      },
+    ];
+  },
+};
+
 export default nextConfig;

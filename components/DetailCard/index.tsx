@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { Box, Typography, BoxProps, Icon, CircularProgress} from "@mui/material";
+import { Box, Typography, CircularProgress} from "@mui/material";
 
 interface DetailCardProps {
     loading: boolean,
