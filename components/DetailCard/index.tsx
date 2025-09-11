@@ -1,9 +1,8 @@
 import React, { ReactNode } from "react";
 
-import { Box, Typography, CircularProgress} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 interface DetailCardProps {
-    loading: boolean,
     icon: ReactNode,
     subtitle: string,
     title: string,
@@ -11,7 +10,7 @@ interface DetailCardProps {
     children?: ReactNode
 }
 
-const DetailCard: React.FC<DetailCardProps> = ({loading, icon, subtitle, title, color, children}) => {
+const DetailCard: React.FC<DetailCardProps> = ({ icon, subtitle, title, color, children}) => {
     return (
         <Box sx={{
                 display: "flex",
@@ -24,7 +23,7 @@ const DetailCard: React.FC<DetailCardProps> = ({loading, icon, subtitle, title, 
             }}>
             <Box>
                 {icon}
-                {loading ? <CircularProgress size={20} /> : <Typography sx={{ fontSize: "14px" }}>{subtitle}</Typography>}
+                {<Typography sx={{ fontSize: "14px" }}>{subtitle}</Typography>}
             </Box>            
             <Box sx={{ textAlign: "right" }}>
                 <Typography sx={{ fontSize: "30px", fontWeight: "bold" }}>{title}</Typography>      

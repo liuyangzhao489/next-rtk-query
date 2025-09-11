@@ -191,6 +191,7 @@ const DashboardPage: React.FC = () => {
                         <TextInput
                             label="password"
                             name="password"
+                            type='password'
                             value={newStudent.password}
                             onChange={handleInputChange}
                         />
