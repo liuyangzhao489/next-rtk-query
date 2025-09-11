@@ -1,9 +1,8 @@
 import React from 'react';
-import {  Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from '@mui/material';
+import {  Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton, Box } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface Student {
   id: number;
@@ -43,12 +42,18 @@ const StudentTable: React.FC<StudentTableProps> = ({ students, onDelete }) => {
               }}
             >
               <TableCell sx={{ border: 'none', padding: '8px' }}>
-                <Image
+                {/* <Image
                   src="https://i.pravatar.cc/150?img=1"
                   alt="Profile"
                   width={50}
                   height={50}
                   style={{ borderRadius: '10%', marginBottom: '10px' }}
+                /> */}
+                <Box
+                  component="img"
+                  src="https://i.pravatar.cc/150?img=1"
+                  alt="profile"
+                  sx={{ width: 50, height: 50, borderRadius: '10%' }}
                 />
               </TableCell>
               <TableCell sx={{ border: 'none', padding: '8px' }}>{student.username}</TableCell>

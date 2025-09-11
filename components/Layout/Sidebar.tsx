@@ -8,7 +8,6 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 import { RootState } from '@/redux/store';
 import { logOut } from '@/redux/authSlice';
-import Image from 'next/image';
 
 interface SidebarProps {
     open: boolean;
@@ -56,12 +55,18 @@ const Sidebar: React.FC<SidebarProps> = ({open, onClose, variant="permanent"}) =
             }}>
                 <Typography variant="h6" sx={{fontWeight: "bold"}}>CRUD OPERATIONS</Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <Image
+                    {/* <Image
                         src="https://i.pravatar.cc/150?img=1"
                         width={80}
                         height={890}
                         alt="Profile"
                         style={{ borderRadius: '50%', marginBottom: '10px' }}
+                    /> */}
+                    <Box
+                        component="img"
+                        src="https://i.pravatar.cc/150?img=1"
+                        alt="profile"
+                        sx={{ width: 80, height: 80, borderRadius: '50%' }}
                     />
                     <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                         {username||  'User'}
